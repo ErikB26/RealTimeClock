@@ -1,9 +1,10 @@
 #include <LiquidCrystal_I2C.h>
 
-const int LCD_PORT = 0x27;
+const int LCD_ADDRESS = 0x27;
 const int LCD_ROW_LENGTH = 16;
+const int LCD_COL_HEIGHT = 2;
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(LCD_ADDRESS, LCD_ROW_LENGTH, LCD_COL_HEIGHT);
 
 /**
  * Initialize the display, turn on the backlight and clear it.
@@ -16,7 +17,6 @@ void lcdSetup() {
 
 /**
  * Display given text on the display.
- * 
  * @param String regel1 The text to be displayed on the first row.
  * @param String regel2 The text to be displayed on the second row.
  */
@@ -25,6 +25,13 @@ void lcdPrint(String row1, String row2) {
   lcd.print(row1);
   lcd.setCursor(calcPosition(row2), 1);
   lcd.print(row2); 
+}
+
+/**
+ * Clear all the text from the display.
+ */
+void lcdClear() {
+  lcd.clear();
 }
 
 /**

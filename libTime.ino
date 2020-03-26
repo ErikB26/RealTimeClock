@@ -1,4 +1,4 @@
-boolean timerIsPassed(unsigned long timer, unsigned long interval) {
+boolean timerIsPassed(unsigned long timer, int interval) {
   if (millis() - timer >= interval) {
     return true;
   } else {
