@@ -1,4 +1,5 @@
 <div style="text-align:center;"><img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/HAN-merkteken-descriptor.png" style="max-height:200px;"/></div>
+
 #Real Time Clock (RTC)
 In deze repo bevindt zich code dat geschreven is voor het laten functioneren van een RTC met een Arduino. De auteurs zijn Erik Brilleman en Roemer Meijs uit klas 1-DB.
 
